@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class ClassRoom {
-  public final Integer MAX_LAPSE_ENROLMENT_PERIOD = 25;
+  public static final Integer MAX_LAPSE_ENROLMENT_PERIOD = 25;
   private String level;
   private String module;
   private String code;
@@ -20,11 +20,13 @@ public class ClassRoom {
   public ClassRoom() {
   }
 
-  public ClassRoom(String level, String module, String code, Integer capacity) {
+  public ClassRoom(String level, String module, String code, Integer capacity,LocalDate startDate,LocalDate endDate) {
     this.level = level;
     this.module = module;
     this.code = code;
     this.capacity = capacity;
+    this.startDate = startDate;
+    this.endDate = endDate;
   }
 
   public String getLevel() {
